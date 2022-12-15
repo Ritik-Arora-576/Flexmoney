@@ -10,8 +10,8 @@
 ![image](https://user-images.githubusercontent.com/68052449/207805886-61e58dbc-6038-4c74-aeb3-bc6f45ce5277.png)
 
 ## Admin Login Page
-Admin ID: 1234 <br/>
-Admin Password: admin@1234
+<b>Admin ID:</b> 1234 <br/>
+<b>Admin Password:</b> admin@1234
 
 ![image](https://user-images.githubusercontent.com/68052449/207806080-5af86745-818b-4444-925a-5bfd8ddecb40.png)
 
