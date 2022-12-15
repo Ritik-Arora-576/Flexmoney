@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" type="image"
+        href="https://www.kindpng.com/picc/m/30-308851_yoga-logo-download-itunes-vector-image-of-yoga.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title-container">
+            <img src="https://st.depositphotos.com/2282445/3255/v/950/depositphotos_32559553-stock-illustration-yoga-logo.jpg" alt="" id="logo">
+            <h1 id="title">Divine Yoga</h1>
+        </div>
+
+        <form action="/register" method="post" class="inner-container">
+            <div>
+                <input type="text" name="name" id="name" class="input" placeholder="Name">
+            </div>
+            <div>
+                <input type="text" name="number" id="number" class="input" placeholder="Phone Number">
+            </div>
+            <div>
+                <input type="text" name="age" id="age" class="input" placeholder="Age">
+            </div>
+            <div>
+                <select name="batch" id="batch" class="input">
+                    <option value="none">Select Batch</option>
+                    <option value="6-7AM">6AM - 7AM</option>
+                    <option value="7-8AM">7AM - 8AM</option>
+                    <option value="8-9AM">8AM - 9AM</option>
+                    <option value="5-6PM">5PM - 6PM</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Register" class="btn">
+            </div>
+            <a href="/login" class="redirect">Already have membership?</a>
+            <a href="/admin" class="redirect">Are you an admin?</a>
+        </form>
+    </div>
+</body>
+
+<script>
+    var status='{{status}}';
+    if(status=='1')
+    {
+        window.alert("Already a member!!");
+    }
+
+    else if(status=='2')
+    {
+        window.alert("Age should be greater than 18 and lesser than 65!!");
+    }
+
+    else if(status=='3')
+    {
+        window.confirm("Registered succesfully!!");
+    }
+</script>
+
+</html>

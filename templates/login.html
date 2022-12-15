@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" type="image"
+        href="https://www.kindpng.com/picc/m/30-308851_yoga-logo-download-itunes-vector-image-of-yoga.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title-container">
+            <img src="https://st.depositphotos.com/2282445/3255/v/950/depositphotos_32559553-stock-illustration-yoga-logo.jpg" alt="" id="logo">
+            <h1 id="title">Divine Yoga</h1>
+        </div>
+
+        <form action="/check" method="post" class="inner-container">
+            <div>
+                <input type="text" name="name" id="name" class="input" placeholder="Name">
+            </div>
+            <div>
+                <input type="text" name="number" id="number" class="input" placeholder="Phone Number">
+            </div>
+            <div>
+                <input type="submit" value="Detail" class="btn">
+            </div>
+        </form>
+
+        <a href="/" class="redirect">Not a member?</a>
+    </div>
+</body>
+
+<script>
+    var status='{{status}}';
+    if(status=='1')
+    {
+        window.alert("Not Registered!!");
+    }
+</script>
+
+</html>

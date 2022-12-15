@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updation Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" type="image"
+        href="https://www.kindpng.com/picc/m/30-308851_yoga-logo-download-itunes-vector-image-of-yoga.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="title-container">
+            <img src="https://st.depositphotos.com/2282445/3255/v/950/depositphotos_32559553-stock-illustration-yoga-logo.jpg" alt="" id="logo">
+            <h1 id="title">Divine Yoga</h1>
+        </div>
+
+        <form action="/check-update" method="post" class="inner-container">
+            <div>
+                <input type="text" name="name" id="name" class="input" placeholder="Name">
+            </div>
+            <div>
+                <input type="text" name="number" id="number" class="input" placeholder="Phone Number">
+            </div>
+            <div>
+                <select name="paid" id="paid" class="input">
+                    <option value="none">Paid 500?</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div>
+                <select name="batch" id="batch" class="input">
+                    <option value="none">Update Batch</option>
+                    <option value="6-7AM">6AM - 7AM</option>
+                    <option value="7-8AM">7AM - 8AM</option>
+                    <option value="8-9AM">8AM - 9AM</option>
+                    <option value="5-6PM">5PM - 6PM</option>
+                </select>
+            </div>
+            <div>
+                <input type="submit" value="Update" class="btn">
+            </div>
+        </form>
+        <form action="/backToAdmin" method="post" class="inner-container">
+            <div>
+                <input type="submit" value="Back" class="btn">
+            </div>
+        </form>
+    </div>
+</body>
+
+<script>
+    var status='{{status}}';
+    if(status=='1')
+    {
+        window.alert("Invalid Member..");
+    }
+
+    else if(status=='2')
+    {
+        window.alert("Can't update due to payment due...");
+    }
+
+    else if(status=='3')
+    {
+        window.confirm("Updated succesfully!!");
+    }
+</script>
+
+</html>

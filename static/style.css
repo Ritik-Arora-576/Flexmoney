@@ -1,0 +1,103 @@
+body {
+    background-image: url('https://cdn.create.vista.com/api/media/small/135645154/stock-photo-woman-standing-in-yoga-position');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 160px 100px 0px 1000px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+}
+
+.title-container{
+    display: flex;
+}
+
+#logo{
+    width: 40px;
+    height: 40px;
+    margin-top: 17px;
+    margin-right: 10px;
+}
+
+.input{
+    border-color: black;
+    text-align: center;
+    background-color: white;
+    color: black;
+    width: 270px;
+    height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    border: 2px black solid;
+    margin: 11px 0px;
+    font-size: 17px;
+}
+
+::placeholder{
+    color: black;
+    opacity: 0.8;
+}
+
+#title{
+    color: black;
+}
+
+.btn{
+    border-color: black;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+    width: 150px;
+    height: 40px;
+    margin: 11px 0px;
+}
+
+.btn:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+#batch{
+    width: 280px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.redirect{
+    color: blue;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.detail{
+    text-align: left;
+}
+
+.params{
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.value{
+    font-size: x-large;
+}
